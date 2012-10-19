@@ -1,0 +1,24 @@
+<h1>Your Pragmatic Catalog</h1>
+
+<% for product in @products -%>
+
+  <div class="entry">
+
+    <%= image_tag(product.image_url) %>
+
+    <h3><%= product.title %></h3>
+
+    <%= product.description %>
+
+    <div class="price-line">
+
+    <span class="price"><%= product.price %></span>
+
+    </div>
+  <%= button_to "Add to Cart", :action => 'add_to_cart', :id => product %>
+
+  </div>
+
+<% end %>
+
+
